@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>She Said YES 🥳</title>
+
+<style>
+body{
+    margin:0;
+    padding:0;
+    overflow:hidden;
+    text-align:center;
+    font-family:Arial;
+    background:black;
+    color:white;
+}
+
+.container{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:90%;
+}
+
+h1{
+    font-size:28px;
+    font-weight:bold;
+}
+
+button{
+    padding:14px 28px;
+    font-size:18px;
+    border:none;
+    border-radius:40px;
+    margin-top:20px;
+    background:gold;
+    font-weight:bold;
+}
+
+/* Rain Effect */
+.rain{
+    position:absolute;
+    font-size:22px;
+    animation:fall linear infinite;
+}
+
+@keyframes fall{
+    0%{transform:translateY(-10vh);opacity:1;}
+    100%{transform:translateY(110vh);opacity:0;}
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>MALAI THA THO TIMLE YESSS BHANXAU BHANERA 🥳🥳</h1>
+    <br>
+    <img src="https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif" width="200">
+    <br>
+    <button onclick="giftRain()">🎁 Gift For Me</button>
+</div>
+
+<script>
+function giftRain(){
+    for(let i=0;i<40;i++){
+        const r=document.createElement("div");
+        r.className="rain";
+        r.innerHTML="Boobie 🍒";
+        r.style.left=Math.random()*100+"vw";
+        r.style.animationDuration=(Math.random()*3+2)+"s";
+        document.body.appendChild(r);
+        setTimeout(()=>r.remove(),5000);
+    }
+}
+</script>
+
+</body>
+</html>
