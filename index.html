@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Will You Be My Valentine 💞</title>
+
+<style>
+body{
+    margin:0;
+    padding:0;
+    overflow:hidden;
+    font-family:Arial;
+    text-align:center;
+    background:linear-gradient(135deg,#ff4e8a,#ff99cc);
+    color:white;
+}
+
+.container{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:90%;
+}
+
+h1{
+    font-size:26px;
+    font-weight:bold;
+}
+
+button{
+    padding:14px 28px;
+    font-size:18px;
+    border:none;
+    border-radius:40px;
+    margin:10px;
+    font-weight:bold;
+}
+
+#yes{
+    background:#00ff88;
+}
+
+#no{
+    background:red;
+    color:white;
+    position:absolute;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>MEROOOOOO MAYALUUUUUU 💞<br>WILL YOU BE MY VALENTINE?</h1>
+    <button id="yes" onclick="goNext()">YES 💖</button>
+    <button id="no">NO 😢</button>
+</div>
+
+<script>
+const noBtn=document.getElementById("no");
+
+function moveNo(){
+    noBtn.style.top=Math.random()*80+"vh";
+    noBtn.style.left=Math.random()*80+"vw";
+}
+
+noBtn.addEventListener("mouseover",moveNo);
+noBtn.addEventListener("touchstart",moveNo);
+noBtn.addEventListener("click",e=>e.preventDefault());
+
+function goNext(){
+    window.location.href="yes.html";
+}
+</script>
+
+</body>
+</html>
